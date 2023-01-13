@@ -21,7 +21,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+<<<<<<< HEAD
                 sh 'ansible-playbook docker.yaml -u ansible --private-key /home/ansible/.ssh/id_rsa'
+=======
+                sh 'ansible-playbook docker.yaml -u ansible --become'
+>>>>>>> bf50068ddfdd123c7b4d6b30fe5183762bb3738c
             }
         }
     }
