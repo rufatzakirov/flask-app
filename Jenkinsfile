@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'asnible-playbook docker.yaml'
+                echo 'ansible-playbook docker.yaml'
             }
         }
     }
