@@ -11,7 +11,7 @@ pipeline {
         stage('Push') {
             steps {
                 echo 'Push to DockerHUB'
-		withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'password', usernameVariable: 'username')]) {
+		withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'password', usernameVariable: 'username')]) {
     		sh 'docker login -u $username -p $password'
 		sh 'docker push rufatzakirov/flask-app:$BUILD_ID'
 		}
