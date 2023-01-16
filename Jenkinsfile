@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+		  echo "DELPOY"
                // sh 'ansible-playbook docker.yaml -u ansible --private-key /home/ansible/.ssh/id_rsa --become -i inventory'
             }
         }
